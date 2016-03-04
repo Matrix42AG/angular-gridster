@@ -150,6 +150,7 @@ $scope.gridsterOpts = {
 	maxSizeX: null, // maximum column width of an item
 	minSizeY: 1, // minumum row height of an item
 	maxSizeY: null, // maximum row height of an item
+	saveGridItemCalculatedHeightInMobile: false, // grid item height in mobile display. true- to use the calculated height by sizeY given
 	resizable: {
 	   enabled: true,
 	   handles: ['n', 'e', 's', 'w', 'ne', 'se', 'sw', 'nw'],
@@ -160,6 +161,8 @@ $scope.gridsterOpts = {
 	draggable: {
 	   enabled: true, // whether dragging items is supported
 	   handle: '.my-class', // optional selector for resize handle
+	   scrollSensitivity: 20, // distance in pixels from the edge of the viewport after which the viewport should scroll, relative to pointer
+	   scrollSpeed: 15, // speed at which the window should scroll once the mouse pointer gets within scrollSensitivity distance
 	   start: function(event, $element, widget) {}, // optional callback fired when drag is started,
 	   drag: function(event, $element, widget) {}, // optional callback fired when item is moved,
 	   stop: function(event, $element, widget) {} // optional callback fired when item is finished dragging

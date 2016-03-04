@@ -49,6 +49,7 @@
 		},
 		draggable: { // options to pass to draggable handler
 			enabled: true,
+			handle: null, // optional selector for resize handle
 			scrollSensitivity: 20, // Distance in pixels from the edge of the viewport after which the viewport should scroll, relative to pointer
 			scrollSpeed: 15 // Speed at which the window should scroll once the mouse pointer gets within scrollSensitivity distance
 		}
