@@ -1366,6 +1366,11 @@
 						return false;
 					}
 
+					// exit, if a child gridster already handles the dragging
+					if (gridster.$element[0].getElementsByClassName('gridster-item-moving').length > 0) {
+						return false;
+					}
+
 					switch (e.which) {
 						case 1:
 							// left mouse button
