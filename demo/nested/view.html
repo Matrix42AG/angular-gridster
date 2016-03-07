@@ -1,0 +1,22 @@
+<div class="demo-container">
+    <h2>Nested gridsters</h2>
+    <p>
+        You can drag items from one gridster to another.
+    </p>
+    <div gridster="globalGristerOpts">
+        <ul>
+            <li gridster-item="item" ng-repeat="item in globalItems">
+
+            	<h3>{{item.content.title || $index}}</h3>
+            	<div ng-if="item.content.gridster.items" gridster="item.content.gridster.opts">
+			        <ul>
+			            <li gridster-item="child" ng-repeat="child in item.content.gridster.items">
+			            	{{$index}}
+			            </li>
+		            </ul>
+            	</div>
+
+            </li>
+        </ul>
+    </div>
+</div>

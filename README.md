@@ -163,9 +163,12 @@ $scope.gridsterOpts = {
 	   handle: '.my-class', // optional selector for resize handle
 	   scrollSensitivity: 20, // distance in pixels from the edge of the viewport after which the viewport should scroll, relative to pointer
 	   scrollSpeed: 15, // speed at which the window should scroll once the mouse pointer gets within scrollSensitivity distance
+	   nestingEnabled: false // wether to allow items to be dragged to a parent/child/sibling gridster instance. when true, needs implementation of "addItem" and "removeItem" callbacks and "addItem" callback on parent instance
 	   start: function(event, $element, widget) {}, // optional callback fired when drag is started,
 	   drag: function(event, $element, widget) {}, // optional callback fired when item is moved,
-	   stop: function(event, $element, widget) {} // optional callback fired when item is finished dragging
+	   stop: function(event, $element, widget) {}, // optional callback fired when item is finished dragging
+	   addItem: function(widget) {}, // optional callback fired when item was moved from another gridster instance to this instance,
+	   removeItem: function(widget) {} // optional callback fired when item was moved to another gridster instance from this instance
 	}
 };
 ```

@@ -1,0 +1,18 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #029fc0;
+    color: #fff;
+}
+
+.gridster .gridster-item {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: #004756;
+    background: #fff;
+    padding: 10px;
+}
+
+.gridster {
+	border: 1px solid black;
+}
